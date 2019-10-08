@@ -30,6 +30,9 @@ COM =\
 
 all: slstatus
 
+debug:
+	$(MAKE) $(MAKEFILE) DEBUG=1
+
 $(COM:=.o): config.mk $(REQ:=.h)
 slstatus.o: slstatus.c slstatus.h arg.h config.h config.mk $(REQ:=.h)
 
